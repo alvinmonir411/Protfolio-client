@@ -3,50 +3,54 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div>
-      <div className="container mx-auto overflow-hidden my-28 px-5 flex flex-col lg:flex-row justify-center items-center gap-10">
+    <div className="min-h-screen bg-black text-white py-20 px-6 lg:px-20">
+      <div className="container mx-auto flex justify-center flex-col lg:flex-row items-center gap-12">
         {/* Image Section */}
         <motion.div
           initial={{ rotate: 180, scale: 0.5, opacity: 0, filter: "blur(8px)" }}
           whileInView={{ rotate: 0, scale: 1, opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="w-full max-w-md"
+          className="w-full max-w-md flex-shrink-0"
         >
-          <img
-            src="/AboutMe.png"
-            alt="About me"
-            className="rounded-[150px_0_150px_0] shadow-2xl w-full h-auto object-cover"
-          />
+          <div className="rounded-[150px_0_150px_0] overflow-hidden border-4 border-pink-500 shadow-[0_0_20px_#ff80bf]">
+            <img
+              src="/AboutMe.png"
+              alt="About Me"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </motion.div>
 
         {/* Text Section */}
         <motion.div
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="flex flex-col gap-6 max-w-xl"
+          className="max-w-2xl flex flex-col gap-6"
         >
-          <p className="uppercase text-sm tracking-widest text-base-content font-semibold">
+          <p className="text-4xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
             About Me
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-base-content">
-            Passionate Frontend <br /> Web Developer
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight text-white">
+            Passionate Frontend <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500 font-bold">
+              Web Developer
+            </span>
           </h2>
-          <p className="text-base-content text-base">
-            I’m Alvin Monir — a creative frontend developer with a strong focus
-            on building responsive, accessible, and performance-driven web
-            applications. With hands-on experience in React, Tailwind CSS, and
-            modern JavaScript, I craft interfaces that deliver smooth user
-            experiences.
+          <p className="text-gray-300 text-base leading-relaxed">
+            I’m <span className="text-pink-400 font-medium">Alvin Monir</span> —
+            a creative frontend developer focused on building fast, modern, and
+            responsive web applications. With strong experience in React,
+            TailwindCSS, and JavaScript, I design interfaces that users love.
           </p>
-          <p className="text-base-content text-base">
-            Whether it's building from scratch or improving an existing product,
-            I love solving problems with clean, maintainable code. Let's build
-            something amazing together.
+          <p className="text-gray-300 text-base leading-relaxed">
+            Whether it's creating from scratch or enhancing existing designs, I
+            enjoy solving real-world problems with scalable and maintainable
+            code.
           </p>
           <a
             href="#projects"
-            className="mt-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-105 transition text-white font-semibold py-3 px-6 rounded-full w-max"
+            className="mt-4 w-max bg-gradient-to-r from-pink-500 to-purple-600 hover:scale-105 transition-transform duration-300 text-white font-semibold py-3 px-6 rounded-full shadow-lg"
           >
             View My Projects →
           </a>

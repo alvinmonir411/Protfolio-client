@@ -1,113 +1,111 @@
-// Hero.jsx
 import React from "react";
+import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Typewriter } from "react-simple-typewriter";
-import { FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
+import Typewriter from "typewriter-effect";
 const Hero = () => {
-  const resumeLink =
-    "https://drive.google.com/file/d/1-8avRBMSLCcbjQN5C3Gs2q0ys2KjAum4/view?usp=sharing";
-
   return (
-    <section className="w-full flex justify-between items-center  px-6 md:px-20 ">
-      <div className="mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
-        {/* Left: Text Content */}
+    <div className=" bg-black text-white">
+      <div className="container mx-auto min-h-screen flex flex-col lg:flex-row justify-between items-center px-6 lg:px-20 relative overflow-hidden">
+        {/* Left Content */}
         <motion.div
-          initial={{ x: -80, opacity: 0, scale: 0 }}
-          animate={{ x: 0, opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5 }}
-          className="space-y-6"
+          initial={{ opacity: 0, x: -60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          className="z-10 max-w-xl"
         >
-          <h1 className="text-4xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+          <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-500 lg:text-7xl font-bold leading-tight mb-6">
+            {/* Hello, I'm <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500">
+              Full Stack Dev
+            </span>
+          */}
             <Typewriter
-              words={["FRONTEND DEVLOPER", "React Developer", "UI Builder"]}
-              loop={0} // 0 = Infinite
-              cursor
-              cursorStyle="|"
-              typeSpeed={80}
-              deleteSpeed={50}
-              delaySpeed={1500}
+              options={{
+                strings: [
+                  "Frontend Developer",
+                  "React Enthusiast",
+                  "UI/UX Designer",
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 75,
+                deleteSpeed: 50,
+              }}
             />
           </h1>
-          <p className="text-xl md:text-3xl lg:text-4xl font-semibold text-base-content ">
-            Hi,
-            <br />
-            I'm{" "}
-            <span className="font-semibold text-yellow-500">
-              Alvin Monir
-            </span>. <br />I specialize in crafting modern, efficient, and
-            responsive websites that help businesses grow and stand out online.
+          <p className="text-gray-300 mb-6 bg-black/40 p-4 rounded-lg">
+            Passionate web developer crafting beautiful and functional digital
+            experiences. Specializing in modern web technologies and responsive
+            design.
           </p>
 
-          {/* Social Links */}
-          <div className="flex space-x-6 text-3xl text-gray-600">
-            <a
-              href="https://www.linkedin.com/in/alvin-monir"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-700 transition"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://github.com/alvinmonir411"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-900 transition"
-              aria-label="GitHub"
+          <div className="flex gap-4 text-lg mb-6">
+            <NavLink
+              to="/github"
+              className="text-[30px] text-white hover:text-pink-400 transition-colors duration-200"
             >
               <FaGithub />
-            </a>
-            <a
-              href="https://web.facebook.com/alvinmmonir321135"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600 transition"
-              aria-label="Facebook"
+            </NavLink>
+            <NavLink
+              to="/linkedin"
+              className="text-[30px] text-white hover:text-blue-400 transition-colors duration-200"
+            >
+              <FaLinkedin />
+            </NavLink>
+            <NavLink
+              to="/twitter"
+              className="text-[30px] text-white hover:text-sky-400 transition-colors duration-200"
+            >
+              <FaTwitter />
+            </NavLink>
+            <NavLink
+              to="/facebook"
+              className="text-[30px] text-white hover:text-blue-600 transition-colors duration-200"
             >
               <FaFacebook />
-            </a>
+            </NavLink>
           </div>
 
-          {/* Buttons */}
-          <div className="mt-4 flex space-x-4">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium py-2 px-6 rounded-full shadow-md hover:scale-105 transition">
-              View My Work
+          <div className="flex gap-4">
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 px-5 py-2 rounded-full text-white font-semibold">
+              Hire Me
             </button>
             <a
-              href="/Moniruzzaman-resume.pdf"
-              download
-              className="bg-gray-800 text-white font-medium py-2 px-6 rounded-full shadow-md hover:bg-gray-700 transition flex items-center justify-center"
+              href="https://drive.google.com/file/d/1-8avRBMSLCcbjQN5C3Gs2q0ys2KjAum4/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-pink-400 text-pink-300 px-5 py-2 rounded-full hover:bg-pink-600 hover:text-white transition"
             >
               Download Resume
             </a>
           </div>
         </motion.div>
 
-        {/* Right: Image */}
+        {/* Right Image */}
         <motion.div
-          initial={{ x: 280, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="relative "
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="relative mt-12 lg:mt-0"
         >
-          {/* Background shapes */}
-          <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-yellow-100 z-0"></div>
-          <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-blue-200 z-0"></div>
-
-          {/* Profile Image */}
-          <motion.img
-            initial={{ x: 280, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            src="/protfolio-hero-picture.png"
-            alt="Alvin Monir"
-            className="relative z-10 w-full max-w-xs md:max-w-xl mx-auto drop-shadow-xl"
-          />
+          >
+            <div className="relative w-80 h-80 lg:w-[28rem] lg:h-[28rem] rounded-full bg-[#0f0f1b] border-4 border-pink-500 shadow-[0_0_25px_#ff80bf] p-1">
+              <img
+                src="/protfolio-hero-picture.png"
+                alt="Profile"
+                className="w-full h-full object-cover rounded-full"
+              />
+            </div>
+          </motion.div>
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 
