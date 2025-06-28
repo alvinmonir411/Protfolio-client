@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import {
   FaEnvelope,
@@ -9,6 +9,25 @@ import {
 } from "react-icons/fa";
 
 const ContactSection = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_ocvhasr", "template_kan30sh", form.current, {
+        publicKey: "k7I5y9ntxbiAxOv6-",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <div className="min-h-screen bg-black py-16 flex flex-col items-center justify-center text-base-content font-sans">
       <div className="container mx-auto px-4">
@@ -104,7 +123,9 @@ const ContactSection = () => {
             </motion.div>
           </div>
           {/* Right Column: Contact Form */}
-          <motion.div
+          <motion.form
+            ref={form}
+            onSubmit={sendEmail}
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
@@ -114,21 +135,25 @@ const ContactSection = () => {
               <input
                 type="text"
                 placeholder="Your Name"
+                name="user_name"
                 className="input input-bordered h-14 bg-[#271c27] border-gray-500 text-neutral-content focus:border-pink-500 focus:ring-1 focus:ring-pink-500 rounded-lg"
               />
               <input
                 type="email"
                 placeholder="Your Email"
+                name="user_email"
                 className="input input-bordered h-14 bg-[#271c27] border-gray-700 text-neutral-content focus:border-pink-500 focus:ring-1 focus:ring-pink-500 rounded-lg"
               />
             </div>
             <input
               type="text"
               placeholder="Subject"
+              name="Subject"
               className="input input-bordered h-14 bg-[#271c27] border-gray-700 text-neutral-content focus:border-pink-500 focus:ring-1 focus:ring-pink-500 rounded-lg"
             />
             <textarea
               placeholder="Your Message"
+              name="message"
               className="textarea textarea-bordered bg-[#271c27] border-gray-700 text-neutral-content h-32 resize-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 rounded-lg"
             ></textarea>
             <button
@@ -137,7 +162,7 @@ const ContactSection = () => {
             >
               Send Message <FaPaperPlane className="ml-2" />
             </button>
-          </motion.div>
+          </motion.form>
         </div>
       </div>
     </div>

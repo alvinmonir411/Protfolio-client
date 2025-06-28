@@ -10,22 +10,22 @@ import Marque from "../Marque";
 const Home = () => {
   return (
     <div className=" ">
-      <div>
+      <div id="Home">
         <Hero />
       </div>
-      <div>
+      <div id="about">
         <About />
       </div>
-      <div>
+      <div id="skills">
         <Skills />
       </div>
-      <div>
+      <div id="fetureProject">
         <FeaturedProjects />
       </div>
       <div>
         <AcademicJourney />
       </div>
-      <div>
+      <div id="Contact">
         <ContactSection />
       </div>
       <div>

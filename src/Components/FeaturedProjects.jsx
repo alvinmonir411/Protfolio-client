@@ -85,7 +85,7 @@ const FeaturedProjects = () => {
                       ))}
                     </div>
 
-                    <div className="flex items-center justify-between gap-4">
+                    <div className="flex items-center justify-between ">
                       <div>
                         {project.github && (
                           <a
@@ -94,7 +94,7 @@ const FeaturedProjects = () => {
                             rel="noopener noreferrer"
                             className="text-white hover:text-pink-500 text-xl transition-colors"
                           >
-                            <button className="btn">
+                            <button className="btn m-2">
                               <FaGithub />
                             </button>
                           </a>

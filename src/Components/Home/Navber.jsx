@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { TiWeatherSunny } from "react-icons/ti";
 import { BiMoon } from "react-icons/bi";
-
+import { Link } from "react-scroll";
 const Navbar = () => {
   const resumeLink =
     "https://drive.google.com/file/d/1-8avRBMSLCcbjQN5C3Gs2q0ys2KjAum4/view?usp=sharing";
@@ -12,60 +12,69 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            `text-sm font-medium transition duration-300 ${
-              isActive
-                ? "text-pink-400 underline underline-offset-8"
-                : "text-gray-300 hover:text-pink-400"
-            }`
-          }
+        <Link
+          to="Home"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={-80}
+          activeClass="text-pink-400 underline underline-offset-8"
+          className="text-sm font-medium text-gray-300 hover:text-pink-400 transition duration-300 cursor-pointer"
         >
           Home
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            `text-sm font-medium transition duration-300 ${
-              isActive
-                ? "text-pink-400 underline underline-offset-8"
-                : "text-gray-300 hover:text-pink-400"
-            }`
-          }
+        <Link
+          to="about"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={-80}
+          activeClass="text-pink-400 underline underline-offset-8"
+          className="text-sm font-medium text-gray-300 hover:text-pink-400 transition duration-300 cursor-pointer"
         >
           About
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink
-          to="/skills"
-          className={({ isActive }) =>
-            `text-sm font-medium transition duration-300 ${
-              isActive
-                ? "text-pink-400 underline underline-offset-8"
-                : "text-gray-300 hover:text-pink-400"
-            }`
-          }
+        <Link
+          to="skills"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={-80}
+          activeClass="text-pink-400 underline underline-offset-8"
+          className="text-sm font-medium text-gray-300 hover:text-pink-400 transition duration-300 cursor-pointer"
         >
           Skills
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink
-          to="/projects"
-          className={({ isActive }) =>
-            `text-sm font-medium transition duration-300 ${
-              isActive
-                ? "text-pink-400 underline underline-offset-8"
-                : "text-gray-300 hover:text-pink-400"
-            }`
-          }
+        <Link
+          to="fetureProject"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={-80}
+          activeClass="text-pink-400 underline underline-offset-8"
+          className="text-sm font-medium text-gray-300 hover:text-pink-400 transition duration-300 cursor-pointer"
         >
           Projects
-        </NavLink>
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="Contact"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={-80}
+          activeClass="text-pink-400 underline underline-offset-8"
+          className="text-sm font-medium text-gray-300 hover:text-pink-400 transition duration-300 cursor-pointer"
+        >
+          Contact
+        </Link>
       </li>
     </>
   );
@@ -75,7 +84,7 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border border-pink-500 shadow-[0_0_15px_#ff80bf] rounded-b-xl"
+      className="sticky top-0 z-50 bg-[#1b151b] backdrop-blur-md border border-b-pink-500 shadow-[0_0_15px_#ff80bf] rounded-b-xl"
     >
       <div className="navbar px-4 lg:px-10 py-3 text-white">
         {/* Logo */}
@@ -85,8 +94,9 @@ const Navbar = () => {
             alt="Logo"
             className="w-10 h-10 object-cover rounded-full border border-pink-400 shadow"
           />
-          <NavLink to="/" className="text-xl font-bold text-white">
-            Alvin <span className="text-pink-400">Monir</span>
+          <NavLink to="/" className="text-2xl font-bold text-white">
+            <span className="text-pink-400">A</span>lvin{" "}
+            <span className="text-pink-400">M</span>onir
           </NavLink>
         </div>
 
