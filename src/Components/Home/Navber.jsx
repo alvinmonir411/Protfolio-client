@@ -102,7 +102,7 @@ const Navbar = () => {
             <input
               type="checkbox"
               className="theme-controller"
-              value="cupcake"
+              value="forest"
             />
 
             {/* sun icon */}
