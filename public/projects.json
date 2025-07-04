@@ -1,22 +1,22 @@
 [
   {
     "id": 1,
-    "title": "Tasty Tales is a dynamic recipe-sharing platform",
-    "description": "where users can explore, contribute, and manage delicious food recipes. The platform features a user-friendly admin dashboard and a parcel management system for food or ingredient deliveries.",
+    "title": "Tasty Tales – A Dynamic Recipe-Sharing Platform",
+    "description": "Tasty Tales is a full-stack web application where users can explore, contribute, and manage delicious food recipes. It includes an admin dashboard and a parcel management system to handle food and ingredient deliveries.",
     "image": "/tastytales.png",
     "tags": ["React", "Tailwind", "Node.js", "Express.js", "MongoDB"],
     "github": "https://github.com/alvinmonir411/TastyTales-Client",
     "live": "https://tastytales1.netlify.app/",
     "technology_stack": [
       "React",
-      "TailwindCSS",
+      "Tailwind CSS",
       "Node.js",
       "Express.js",
       "MongoDB"
     ],
-    "project_overview": "Tasty Tales is a dynamic recipe-sharing platform where users can explore, contribute, and manage delicious food recipes. The platform features a user-friendly admin dashboard and a parcel management system for food or ingredient deliveries.",
-    "challenges_and_solutions": "A major challenge was to create a seamless experience for managing food deliveries and recipe contributions. The solution was building a comprehensive admin dashboard that allows easy tracking of deliveries and user contributions, ensuring smooth workflow.",
-    "future_plans": "I am plan to introduce a mobile app for both iOS and Android, implement AI for personalized recipe suggestions, and integrate real-time delivery tracking."
+    "project_overview": "Tasty Tales is a full-featured MERN stack recipe-sharing platform with functionality for browsing, adding, and managing recipes. It includes a role-based admin dashboard and an integrated parcel delivery system for food/ingredient logistics.",
+    "challenges_and_solutions": "A key challenge was combining content management with delivery tracking. This was solved by designing an intuitive admin panel that allows easy control over recipe approvals and parcel status, resulting in efficient backend operations and a seamless user experience.",
+    "future_plans": "Future updates include launching a cross-platform mobile app, using AI for personalized recipe suggestions, and adding real-time GPS-based delivery tracking."
   },
   {
     "id": 2,
@@ -34,14 +34,14 @@
   {
     "id": 3,
     "title": "📘 ShikkhaZone – Knowledge Sharing Platform",
-    "description": "A full-stack MERN-based knowledge-sharing platform where students and learners can share articles, gain insights, and engage in meaningful discussions. Users can post, like articles, and interact with others.",
+    "description": "A full-stack MERN-based knowledge-sharing platform where students and learners can publish articles, gain insights, and engage in meaningful discussions. Users can post, like, and comment on articles to connect with others.",
     "image": "/sikhazone.png",
     "tags": ["React", "TailwindCSS", "MongoDB", "Node.js"],
     "github": "https://github.com/alvinmonir411/Sikkha-Zone-Client?tab=readme-ov-file",
     "live": "https://sikka-zone.netlify.app/",
     "technology_stack": ["React", "TailwindCSS", "MongoDB", "Node.js"],
-    "project_overview": "ShikkhaZone is a knowledge-sharing platform designed to bring students, learners, and professionals together to share articles, insights, and experiences. The platform allows users to post and like articles and interact through comments and discussions.",
-    "challenges_and_solutions": "A key challenge was ensuring smooth interaction and real-time updates for discussions and likes. I am implemented I ambSockets and used MongoDB’s change streams for efficient updates and notifications in real-time.",
-    "future_plans": "I am plan to expand the platform by adding video content sharing, real-time chat functionality, and creating user profiles with achievements and badges for active contributors."
+    "project_overview": "ShikkhaZone is an educational knowledge-sharing platform built for students, learners, and professionals to publish and explore valuable content. It supports article creation, liking, and commenting to encourage collaborative learning.",
+    "challenges_and_solutions": "One major challenge was maintaining a smooth user experience for likes and discussions in real-time. This was solved using WebSockets and MongoDB’s change streams, allowing efficient updates and real-time interactions.",
+    "future_plans": "Future improvements include integrating video content sharing, enabling real-time chat features, and introducing contributor profiles with achievements and badges to reward community engagement."
   }
 ]

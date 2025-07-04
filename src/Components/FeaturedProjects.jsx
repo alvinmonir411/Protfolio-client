@@ -131,9 +131,9 @@ const FeaturedProjects = () => {
       {selectedProject && (
         <dialog
           id="my_modal_5"
-          className="modal modal-middle max-w-[1400px] w-full sm:w-[1200px] mx-auto"
+          className="modal modal-middle w-full sm:w-[1200px] mx-auto"
         >
-          <div className="modal-box bg-[#20191f] text-white p-6 rounded-lg shadow-lg">
+          <div className="modal-box  max-w-[1400px] bg-[#20191f] text-white p-6 rounded-lg shadow-lg">
             {/* Modal Image */}
             <div className="mb-4">
               <img
