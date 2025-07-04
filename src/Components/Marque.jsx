@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const Marque = () => {
   return (
-    <div className="bg-black p-3">
+    <div className="bg-black overflow-hidden p-3">
       <Marquee speed={50} loop={0} pauseOnHover={true}>
         {[
           "Full Stack Developer 💻",

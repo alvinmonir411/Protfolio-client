@@ -2,18 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 
-const skills = [
+const skill = [
   { name: "HTML5", icon: "vscode-icons:file-type-html", level: 90 },
   { name: "CSS3", icon: "vscode-icons:file-type-css", level: 85 },
   { name: "JavaScript", icon: "vscode-icons:file-type-js-official", level: 85 },
   { name: "React", icon: "vscode-icons:file-type-reactjs", level: 80 },
-  { name: "Next.js", icon: "vscode-icons:file-type-next", level: 75 },
+  { name: "React Router", icon: "vscode-icons:file-type-reactjs", level: 75 },
   { name: "Node.js", icon: "vscode-icons:file-type-node", level: 70 },
-  {
-    name: "TypeScript",
-    icon: "vscode-icons:file-type-typescript-official",
-    level: 75,
-  },
+  { name: "Express.js", icon: "logos:express", level: 80 },
   { name: "Tailwind", icon: "vscode-icons:file-type-tailwind", level: 85 },
   { name: "MongoDB", icon: "devicon:mongodb", level: 70 },
   { name: "Git", icon: "vscode-icons:file-type-git", level: 75 },
@@ -21,9 +17,9 @@ const skills = [
   { name: "Figma", icon: "logos:figma", level: 70 },
 ];
 
-const SkillsGrid = () => {
+const skills = () => {
   return (
-    <section className=" px-6   mx-auto bg-black">
+    <section className=" px-6   mx-auto bg-black overflow-hidden">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: -40 }}
@@ -41,7 +37,7 @@ const SkillsGrid = () => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {skills.map(({ name, icon, level }, i) => (
+          {skill.map(({ name, icon, level }, i) => (
             <motion.div
               key={name}
               initial={{ opacity: 0, y: 30 }}
@@ -90,4 +86,4 @@ const SkillsGrid = () => {
   );
 };
 
-export default SkillsGrid;
+export default skills;

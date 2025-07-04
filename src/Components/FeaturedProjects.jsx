@@ -26,7 +26,7 @@ const FeaturedProjects = () => {
   };
 
   return (
-    <section className="bg-black text-white py-36 px-6">
+    <section className="bg-black text-white py-36 px-6 overflow-hidden">
       <div className="container mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
           Featured{" "}

@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-black text-white py-20 px-6 lg:px-20">
-      <div className="container mx-auto flex justify-center flex-col lg:flex-row items-center gap-12">
+    <div className="min-h-screen bg-black text-white py-20 px-6 lg:px-20 overflow-hidden">
+      <div className="container mx-auto flex  justify-center flex-col-reverse lg:flex-row items-center gap-12">
         {/* Image Section */}
         <motion.div
           initial={{ rotate: 180, scale: 0.5, opacity: 0, filter: "blur(8px)" }}
@@ -48,12 +49,12 @@ const About = () => {
             enjoy solving real-world problems with scalable and maintainable
             code.
           </p>
-          <a
-            href="#projects"
+          <Link
+            to="https://github.com/alvinmonir411"
             className="mt-4 w-max bg-gradient-to-r from-pink-500 to-purple-600 hover:scale-105 transition-transform duration-300 text-white font-semibold py-3 px-6 rounded-full shadow-lg"
           >
             View My Projects →
-          </a>
+          </Link>
         </motion.div>
       </div>
     </div>

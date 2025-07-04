@@ -29,7 +29,7 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black py-16 flex flex-col items-center justify-center text-base-content font-sans">
+    <div className="min-h-screen overflow-hidden bg-black py-16 flex flex-col items-center justify-center text-base-content font-sans">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: -50 }}

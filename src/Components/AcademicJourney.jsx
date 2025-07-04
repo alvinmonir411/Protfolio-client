@@ -11,7 +11,7 @@ import {
 
 const AcademicJourney = () => {
   return (
-    <div className="min-h-screen bg-black py-16 flex flex-col items-center justify-center text-base-content font-sans">
+    <div className="min-h-screen bg-black py-16 overflow-hidden flex flex-col items-center justify-center text-base-content font-sans">
       <div className="container max-w-4xl px-4">
         <h2 className="text-4xl font-bold text-center mb-12 text-primary-content">
           Academic Journey

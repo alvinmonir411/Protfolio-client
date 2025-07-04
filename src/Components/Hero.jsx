@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 const Hero = () => {
   return (
-    <div className=" bg-black text-white">
+    <div className=" bg-black text-white overflow-hidden">
       <div className="container mx-auto min-h-screen flex flex-col lg:flex-row justify-between items-center px-6 lg:px-20 relative overflow-hidden">
         {/* Left Content */}
         <motion.div
@@ -16,17 +16,15 @@ const Hero = () => {
           className="z-10 max-w-xl"
         >
           <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-500 lg:text-7xl font-bold leading-tight mb-6">
-            {/* Hello, I'm <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500">
-              Full Stack Dev
-            </span>
-          */}
             <Typewriter
               options={{
                 strings: [
-                  "Hi,I am Alvin Monir ",
-                  "Frontend Developer",
-                  "React Enthusiast",
+                  "Hi,I am",
+                  "Alvin Monir",
+                  "Frontend ",
+                  "Developer",
+                  "React ",
+                  "Enthusiast",
                 ],
                 autoStart: true,
                 loop: true,
@@ -43,25 +41,25 @@ const Hero = () => {
 
           <div className="flex gap-4 text-lg mb-6">
             <NavLink
-              to="/github"
+              to="https://github.com/alvinmonir411"
               className="text-[30px] text-white hover:text-pink-400 transition-colors duration-200"
             >
               <FaGithub />
             </NavLink>
             <NavLink
-              to="/linkedin"
+              to="https://www.linkedin.com/in/alvin-monir/"
               className="text-[30px] text-white hover:text-blue-400 transition-colors duration-200"
             >
               <FaLinkedin />
             </NavLink>
             <NavLink
-              to="/twitter"
+              to="https://x.com/AlvinMonir"
               className="text-[30px] text-white hover:text-sky-400 transition-colors duration-200"
             >
               <FaTwitter />
             </NavLink>
             <NavLink
-              to="/facebook"
+              to="https://www.facebook.com/alvinmmonir321135"
               className="text-[30px] text-white hover:text-blue-600 transition-colors duration-200"
             >
               <FaFacebook />
@@ -73,9 +71,10 @@ const Hero = () => {
               Hire Me
             </button>
             <a
-              href="https://drive.google.com/file/d/1-8avRBMSLCcbjQN5C3Gs2q0ys2KjAum4/view?usp=sharing"
+              href="https://drive.google.com/file/d/16VBW8RRoV20chfIjwRHBVUWcguTHaPXL/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
+              download={true}
               className="border border-pink-400 text-pink-300 px-5 py-2 rounded-full hover:bg-pink-600 hover:text-white transition"
             >
               Download Resume

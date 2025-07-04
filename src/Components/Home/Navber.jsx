@@ -7,7 +7,7 @@ import { BiMoon } from "react-icons/bi";
 import { Link } from "react-scroll";
 const Navbar = () => {
   const resumeLink =
-    "https://drive.google.com/file/d/1-8avRBMSLCcbjQN5C3Gs2q0ys2KjAum4/view?usp=sharing";
+    "https://drive.google.com/file/d/16VBW8RRoV20chfIjwRHBVUWcguTHaPXL/view?usp=sharing";
 
   const navLinks = (
     <>
